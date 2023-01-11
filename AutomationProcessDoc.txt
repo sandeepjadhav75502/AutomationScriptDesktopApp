@@ -1,0 +1,23 @@
+How to do desktop application automation process.
+Step 1:
+Visit below link.
+https://techcommunity.microsoft.com/t5/testingspot-blog/winappdriver-and-desktop-ui-test-automation/ba-p/1124543
+Step 2: Visti below link
+https://www.automatetheplanet.com/automate-windows-desktop-apps-winappdriver/
+Step 3:
+
+1. Download WinAppDriver
+2. Install WinAppDriver (https://github.com/microsoft/WinAppDriver)
+3. Enable Windows 10 Developer Mode
+   Open Windows 10 Settings. Then navigate to Update & Settings section. Click For Developers tab. Choose the Developer mode option.
+4. Download Windows SDK
+5. Install Windows SDK
+6. Create a new "Unit Test Project(.Net Framework)" in Visual Studio
+7. Install the required NuGet packages
+
+Since WinAppDriver is built on top of the Appium framework the most important NuGet package that you need to install is Microsoft.WinAppDriver.Appium.WebDriver. You can use some other unit test framework if you don't like NUnit. For all packages I use the Version="*" option which will install the latest stable version of the package.
+Since the package is still not-stable and in BETA you can use Appium.WebDriver instead.
+Using Appium Windows Application Driver is integrated with Appium, meaning if you use Appium as part of the test runner then it will launch WinAppDriver.exe and proxy the requests for you.
+
+Initialize Windows Application Driver
+Before you can run your tests you need to start the WinAppDriver server. By default you can find it here: C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe
